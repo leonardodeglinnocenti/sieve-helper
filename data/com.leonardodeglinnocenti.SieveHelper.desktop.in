@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=sieve-helper
+Exec=sieve-helper
+Icon=com.leonardodeglinnocenti.SieveHelper
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true

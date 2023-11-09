@@ -1,0 +1,6 @@
+data/com.leonardodeglinnocenti.SieveHelper.desktop.in
+data/com.leonardodeglinnocenti.SieveHelper.metainfo.xml.in
+data/com.leonardodeglinnocenti.SieveHelper.gschema.xml
+src/main.py
+src/window.py
+src/window.ui
