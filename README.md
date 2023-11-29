@@ -1,15 +1,14 @@
 # sieve-helper
 
-Sieve helper is a tool to help you write sieve scripts for [dovecot](https://www.dovecot.org/).
+Sieve helper is a GUI that simplifies writing sieve scripts for Nextcloud, Dovecot and other projects.
 
 ## Installation
-### From packages
-* Arch Linux: [sieve-helper](https://aur.archlinux.org/packages/sieve-helper/)
-* Debian: [sieve-helper](https://packages.debian.org/sieve-helper)
-* Generic Linux: In the releases
-### From source
-* clone this repository
-* meson build
+### Flatpak
+* Install flatpak
+* flatpak install com.leonardodeglinnocenti.SieveHelper
+### Build from source
+* Clone the repository
+* ...
 
 ## Development
 * Gnome Builder
