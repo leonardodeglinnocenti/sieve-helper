@@ -26,8 +26,8 @@ class SieveUtilities():
         return out_string
     # New version of sieve config where config is not an array, but an object with keys
 
-    def new_generate_sieve_config(config):
+   # def new_generate_sieve_config(config):
         # config has attributes config.email config.from_check config.to_check config.target_folder
-        out_string = "require \"fileinto\";"
+  #      out_string = "require \"fileinto\";"
 
 
