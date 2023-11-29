@@ -66,7 +66,7 @@ class SieveHelperWindow(Adw.ApplicationWindow):
 
     def submit(self, action):
         # TODO: Check if the user enters an empty entry.
-        # TODO: Check consistency.
+        # TODO: Check consistency. No empty From and To at the same time
         buffer = self.text_entry.get_buffer()
         text = buffer.get_text()
         entry = Gtk.Entry(text=text)
