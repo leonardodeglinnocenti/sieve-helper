@@ -17,6 +17,11 @@
                 <property name="menu-model">primary_menu</property>
               </object>
             </child>
+            <child>
+              <object class="GtkButton" id="generate_button">
+                <property name="label">Generate</property>
+              </object>
+            </child>
           </object>
         </child>
         <property name="content">

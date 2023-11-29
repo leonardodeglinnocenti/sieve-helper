@@ -30,6 +30,7 @@ sieve_helper_sources = [
   '__init__.py',
   'main.py',
   'window.py',
+  'sieve_config_generator.py',
 ]
 
 install_data(sieve_helper_sources, install_dir: moduledir)
