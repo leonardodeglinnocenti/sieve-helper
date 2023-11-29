@@ -10,3 +10,7 @@ Sieve helper is a tool to help you write sieve scripts for [dovecot](https://www
 ### From source
 * clone this repository
 * meson build
+
+## Development
+* Gnome Builder
+
