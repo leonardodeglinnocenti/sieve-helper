@@ -6,7 +6,25 @@
     <property name="default-width">600</property>
     <property name="default-height">300</property>
     <property name="content">
-         <object class="GtkBox">
+      <!-- FIXME: Toast Overlay not working -->
+      <object class="AdwToastOverlay" id="toast_overlay">
+        <property name="child">
+          <object class="GtkScrolledWindow">
+            <property name="hexpand">true</property>
+            <property name="vexpand">true</property>
+            <property name="margin-top">6</property>
+            <property name="margin-bottom">6</property>
+            <property name="margin-start">6</property>
+            <property name="margin-end">6</property>
+            <property name="child">
+              <object class="GtkTextView" id="main_text_view">
+                <property name="monospace">true</property>
+              </object>
+            </property>
+          </object>
+        </property>
+      </object>
+      <object class="GtkBox">
         <property name="orientation">1</property>
         <child>
           <object class="AdwHeaderBar">

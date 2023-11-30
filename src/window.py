@@ -39,6 +39,9 @@ class SieveHelperWindow(Adw.ApplicationWindow):
     folder_submit_button = Gtk.Template.Child()
     folders_string_list = Gtk.Template.Child()
 
+    # Toast notification system
+    toast_overlay = Gtk.Template.Child()
+
     # Runtime variables
     entries = []
     folders = []
@@ -65,8 +68,6 @@ class SieveHelperWindow(Adw.ApplicationWindow):
         print(su.generate_sieve_config(self.choices))
 
     def submit(self, action):
-        # TODO: Check if the user enters an empty entry.
-        # TODO: Check consistency. No empty From and To at the same time
         buffer = self.text_entry.get_buffer()
         text = buffer.get_text()
         entry = Gtk.Entry(text=text)
@@ -92,6 +93,18 @@ class SieveHelperWindow(Adw.ApplicationWindow):
         if self.to_check_button.get_active():
             to_check.set_active(True)
             to_status = True
+
+        # Check consistency and submit, otherwise notify user
+        # TODO: make text box appear red when error status is triggered
+        if text == "":
+            self.toast_overlay.add_toast(Adw.Toast(title="ERROR: no email address provided."))
+            return
+        if from_status == False and to_status == False:
+            self.toast_overlay.add_toast(Adw.Toast(title="ERROR: at least one between From and To must be checked."))
+            return
+        if self.folder_selection.get_selected_item() == None:
+            self.toast_overlay.add_toast(Adw.Toast(title="ERROR: you must choose a folder."))
+            return
 
         hbox.append(entry)
         hbox.append(folder_selector)
